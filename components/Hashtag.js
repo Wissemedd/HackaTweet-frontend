@@ -30,7 +30,7 @@ function Hashtag() {
 
     setQuery('#' + hashtag);
 
-    fetch(`hacka-tweet-back-af0ddri4m-wissemedd.vercel.app/tweets/hashtag/${user.token}/${hashtag}`)
+    fetch(`https://hacka-tweet-back-af0ddri4m-wissemedd.vercel.app/tweets/hashtag/${user.token}/${hashtag}`)
       .then(response => response.json())
       .then(data => {
         data.result && dispatch(loadTweets(data.tweets));

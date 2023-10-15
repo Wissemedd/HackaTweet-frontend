@@ -27,7 +27,7 @@ function Home() {
       return;
     }
 
-    fetch(`hacka-tweet-back-af0ddri4m-wissemedd.vercel.app/tweets/all/${user.token}`)
+    fetch(`https://hacka-tweet-back-af0ddri4m-wissemedd.vercel.app/tweets/all/${user.token}`)
       .then(response => response.json())
       .then(data => {
         data.result && dispatch(loadTweets(data.tweets));
@@ -41,7 +41,7 @@ function Home() {
   };
 
   const handleSubmit = () => {
-    fetch('hacka-tweet-back-af0ddri4m-wissemedd.vercel.app/tweets', {
+    fetch('https://hacka-tweet-back-af0ddri4m-wissemedd.vercel.app/tweets', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token: user.token, content: newTweet }),
