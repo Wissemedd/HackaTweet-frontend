@@ -12,7 +12,7 @@ function Tweet(props) {
   const user = useSelector((state) => state.user.value);
 
   const handleLike = () => {
-    fetch('https://hacka-tweet-back.vercel.app/tweets/like', {
+    fetch('https://hacka-tweet-back-1ljx2g7aq-wissemedd.vercel.app/tweets/like', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token: user.token, tweetId: props._id }),
@@ -23,7 +23,7 @@ function Tweet(props) {
   };
 
   const handleDelete = () => {
-    fetch('https://hacka-tweet-back.vercel.app/tweets', {
+    fetch('https://hacka-tweet-back-1ljx2g7aq-wissemedd.vercel.app/tweets', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token: user.token, tweetId: props._id }),
