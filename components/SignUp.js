@@ -20,7 +20,7 @@ function SignUp() {
   const [password, setPassword] = useState('');
 
   const handleSubmit = () => {
-    fetch('http://hacka-tweet-back-af0ddri4m-wissemedd.vercel.app/users/signup', {
+    fetch('https://hacka-tweet-back-ovalu1cyc-wissemedd.vercel.app/users/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ firstName, username, password }),
